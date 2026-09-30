@@ -626,6 +626,218 @@ footer hr{
 
 /* Final rodapé */
 
+/* Estilo da reserva */
+section.reservas{
+    padding: 88px 0;
+    background: linear-gradient(135deg, #e8f7fb 0%, #d5eff5 100%);
+    scroll-margin-top: 110px;
+}
+
+.reservas .interface{
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.4fr);
+    align-items: start;
+    gap: 64px;
+}
+
+.reservas-intro{
+    padding-top: 22px;
+}
+
+.reservas-eyebrow{
+    color: #087c78;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.reservas-intro h2{
+    margin: 14px 0;
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 400;
+}
+
+.reservas-intro h2 span{
+    display: block;
+    color: #087c78;
+    font-weight: 700;
+}
+
+.reservas-intro p{
+    max-width: 360px;
+    color: #35515a;
+    line-height: 1.7;
+}
+
+.reserva-form{
+    padding: 32px;
+    border: 1px solid rgba(0, 63, 105, 0.12);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 16px 44px rgba(0, 63, 105, 0.1);
+}
+
+.reserva-campos{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.reserva-campo{
+    display: grid;
+    gap: 8px;
+    color: #193b4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.reserva-campo input{
+    width: 100%;
+    min-height: 48px;
+    padding: 0 12px;
+    border: 1px solid #cbdde2;
+    border-radius: 4px;
+    background: #fbfdfe;
+    color: #183540;
+    font-size: 14px;
+}
+
+.reserva-campo input:focus-visible{
+    outline: 2px solid #087c78;
+    outline-offset: 2px;
+}
+
+.reserva-pagamento{
+    margin: 26px 0 22px;
+    padding: 0;
+    border: 0;
+}
+
+.reserva-pagamento legend{
+    margin-bottom: 12px;
+    color: #193b4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.opcoes-pagamento{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.opcao-pagamento{
+    position: relative;
+    cursor: pointer;
+}
+
+.opcao-pagamento input{
+    position: absolute;
+    opacity: 0;
+}
+
+.opcao-pagamento span{
+    display: flex;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #cbdde2;
+    border-radius: 4px;
+    color: #244651;
+    font-size: 13px;
+    text-align: center;
+    transition: border-color .2s, background-color .2s;
+}
+
+.opcao-pagamento span i{
+    font-size: 17px;
+}
+
+.opcao-pagamento span small{
+    font-size: 11px;
+}
+
+.opcao-pagamento input:checked + span{
+    border-color: #087c78;
+    background: #e8f7f4;
+    color: #075e5c;
+}
+
+.opcao-pagamento input:focus-visible + span{
+    outline: 2px solid #087c78;
+    outline-offset: 2px;
+}
+
+.reserva-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 0;
+    border-top: 1px solid #dce8eb;
+    color: #244651;
+}
+
+.reserva-total div{
+    display: grid;
+    gap: 4px;
+}
+
+.reserva-total small{
+    color: #617880;
+    font-size: 12px;
+}
+
+.reserva-total strong{
+    color: #003f69;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.reserva-submit{
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 0;
+    border-radius: 4px;
+    background: #087c78;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color .2s;
+}
+
+.reserva-submit:hover{
+    background: #05635f;
+}
+
+.reserva-aviso,
+.reserva-retorno{
+    margin-top: 14px;
+    color: #617880;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.reserva-retorno:empty{
+    display: none;
+}
+
+.reserva-retorno:not(:empty){
+    padding: 12px;
+    border-left: 3px solid #087c78;
+    background: #e8f7f4;
+    color: #164a49;
+}
+/* Final da reserva */
+
 @media (max-width: 768px){
     .interface{
         width: 100%;
@@ -687,9 +899,27 @@ footer hr{
 
     section.vantagens,
     section.contato,
-    section.como-funciona{
+    section.como-funciona,
+    section.reservas{
         padding-top: 56px;
         padding-bottom: 56px;
+    }
+
+    .reservas .interface{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .reservas-intro{
+        padding-top: 0;
+    }
+
+    .reservas-intro h2{
+        font-size: 34px;
+    }
+
+    .reserva-form{
+        padding: 24px;
     }
 
     .vantagens .itens-conteiner{
