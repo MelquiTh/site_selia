@@ -1,0 +1,627 @@
+/*Parâmetros gerais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: rgb(196, 239, 250);
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header .botão-wpp-menu button, .Hero .txt-hero button, .hoteis button, .slider .slider-txt button{
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+/* Parâmetros gerais */
+
+/* Estilo do header */
+header{
+    width: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .Logo img{
+    max-width: 50px;
+}
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a{
+    color: #ffff;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+header .menu-desktop nav ul li a:hover{
+    transform: scale(1.05);
+}
+/* Estilo Header */
+
+/* Início botão */
+header .botão-wpp-menu button{
+    width: 140px;
+    height: 50px;
+}
+
+.Hero .txt-hero button{
+    width: 220px;
+    height: 50px;
+}
+
+header .botão-wpp-menu button:hover, .Hero .txt-hero button:hover, .hoteis button:hover, .slider .slider-txt button:hover{
+    background-color: #49a034;
+}
+/* Final botão*/
+
+/* Estilo do Hero */
+section.Hero{
+    height: 100vh;
+    background-image: url("../image/Eldorado_piscinas.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffff;
+}
+
+.Hero .interface{
+    display: flex;
+    align-items: center;
+    height:100%;
+}
+
+.Hero .txt-hero h1{
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+.Hero .txt-hero h1 span{
+    display: block;
+    font-weight: 800;
+}
+
+.Hero .txt-hero p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+/* Final Hero */
+
+/* Estilo das vantagens */
+section.vantagens{
+    padding: 80px 0;
+}
+
+.vantagens .itens-conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20%;
+    margin-bottom: 80px;
+}
+
+.vantagens .itens-conteiner .img-itens img{
+    max-width: 520px;
+    border-radius: 10px;
+}
+
+.vantagens .itens-conteiner .txt-itens h3{
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+
+.itens-conteiner .txt-itens h3 span{
+    font-weight: 300;
+}
+
+/* estilo dos botões de contato */
+
+section.contato{
+    background-color: #a8e5fd;
+    padding: 80px 0;
+}
+
+.txt-contato, .icons-contato{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3{
+    font-size: 2.5em;
+    line-height: 50px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    
+}
+
+.contato .txt-contato h3 span{
+   display: block;
+   font-weight: 700;
+}
+
+.contato .icons-contato a{
+    text-decoration: none;
+}
+
+.contato .icons-contato button{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: 60%;
+    height: 60px;
+    margin: 0px auto 20px auto;
+    padding: 0 60px;
+   
+    background-color: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.contato .icons-contato button i{
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.contato .icons-contato button:hover{
+    background-color: #003f69;
+    color: #fff;
+}
+
+/* Estilo da section slider */
+
+section.slider{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.slider .slide-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slider .slide-bg.active{
+    opacity: 1;
+}
+
+.slider .slide-0{
+    background-image: url("../image/Novas fotos/WhatsApp Image 2026-09-09 at 10.32.47.jpeg");
+}
+
+.slider .slide-1{
+    background-image: url("../image/Novas fotos/WhatsApp Image 2026-09-09 at 10.28.46.jpeg");
+}
+
+.slider .slide-2{
+    background-image: url("../image/Novas fotos/WhatsApp Image 2026-09-09 at 10.28.47.jpeg");
+}
+
+.slider .slide-3{
+    background-image: url("../image/Novas fotos/WhatsApp Image 2026-09-09 at 10.28.48 (1).jpeg");
+}
+
+.slider .slide-4{
+    background-image: url("../image/Novas fotos/WhatsApp Image 2026-09-09 at 10.28.47 (2).jpeg");
+}
+
+.slider .slide-1,
+.slider .slide-2,
+.slider .slide-3,
+.slider .slide-4{
+    filter: blur(1.5px) brightness(0.95);
+}
+
+.slider > .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3));
+}
+
+.slider > .interface{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.slider .slider-dots{
+    list-style-type: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    padding-left: 20px;
+}
+
+.slider .slider-dots .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.slider .slider-dots .dot:last-child{
+    margin-bottom: 0;
+}
+
+.slider .slider-dots .dot.active{
+    background-color: #fff;
+    transform: scale(1.3);
+}
+
+.slider .slider-txt{
+    max-width: 480px;
+}
+
+.slider .slide-info{
+    display: none;
+}
+
+.slider .slide-info.active{
+    display: block;
+}
+
+.slider .slide-info h3{
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.slider .slide-info h3 span{
+    display: block;
+    font-size: 0.5em;
+    font-weight: 300;
+}
+
+.slider .slide-info p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+.slider .slider-txt button{
+    width: 220px;
+    height: 50px;
+}
+
+.slider .slider-preview{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slider .slider-preview .preview-item{
+    width: 180px;
+    height: 130px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.slider .slider-preview .preview-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slider-preview .preview-item p{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: 600;
+}
+
+.slider .slider-preview .preview-item:hover{
+    transform: scale(1.05);
+}
+
+/* Final slider */
+
+/* estilo seções do hotéis */
+
+section.hoteis{
+    height: 600px;
+
+    background-image: url("../image/sala-apartamento.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.hoteis > .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 100%;
+    height: 100%;
+}
+
+.hoteis > .interface{
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.hoteis h3{
+  font-size: 3em;
+  line-height: 50px;  
+  font-weight: 200;
+}
+
+.hoteis h3 span{
+    display: block;
+    font-weight: 600;
+}
+
+.hoteis p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.hoteis button{
+    width: 220px;
+    height: 60px;
+}
+
+/* Estilo da seção como funciona */
+
+section.como-funciona{
+    padding: 80px 0;
+}
+
+.txt-funciona, .instrucoes{
+    display: inline-block;
+    width: 50%; 
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.como-funciona .txt-funciona{
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.como-funciona .txt-funciona h3{
+    font-size: 2.5em;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+.como-funciona .txt-funciona h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.instrucoes .instru-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 40px;
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+.instrucoes .instru-box img{
+    max-width: 100px;
+}
+
+.instrucoes .instru-box h4{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.instrucoes .instru-box h4 span{
+    font-weight: 300;
+}
+
+.instrucoes .instru-box p{
+    
+    line-height: 20px;
+}
+
+.localização {
+    width: 100%;
+}
+
+.localização iframe{
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Estilo do rodapé */
+
+footer{
+    background-color: #003f69;
+    color: #fff;
+    padding: 60px 0 20px 0;
+}
+
+.footer-topo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-sobre{
+    max-width: 280px;
+}
+
+.footer-sobre img{
+    max-width: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-sobre p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    opacity: 0.8;
+}
+
+footer h4{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-links ul,
+.footer-contato ul{
+    list-style-type: none;
+}
+
+.footer-links ul li,
+.footer-contato ul li{
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a,
+.footer-contato ul li a{
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    transition: .3s;
+}
+
+.footer-links ul li a:hover{
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.footer-contato ul li a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-contato ul li a:hover{
+    opacity: 1;
+}
+
+.footer-icon-box{
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-social-icons{
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icons .footer-icon-box{
+    width: 40px;
+    height: 40px;
+}
+
+.footer-icon-box:hover{
+    background-color: #fff;
+    color: #003f69;
+    border-color: #fff;
+}
+
+footer hr{
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-copy{
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.7;
+    padding-top: 20px;
+}
+
+/* Final rodapé */
